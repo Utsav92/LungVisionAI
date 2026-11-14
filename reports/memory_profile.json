@@ -1,0 +1,118 @@
+{
+  "loader": {
+    "loader_patches_per_s_train_aug": 53.63,
+    "unified_memory_total_GB": 24.0,
+    "recommended_working_set_GB_mps": 17.76,
+    "note": "tokens/s is N/A for this imaging model; patches/s and voxels/s reported instead"
+  },
+  "runs": [
+    {
+      "device": "cpu",
+      "patch": "32x32x32",
+      "base_channels": 16,
+      "batch": 1,
+      "step_s": 0.078,
+      "patches_per_s": 12.76,
+      "voxels_per_s": 417959,
+      "mps_driver_alloc_GB": NaN,
+      "sys_mem_used_GB": 12.3,
+      "swap_used_GB": 1.48
+    },
+    {
+      "device": "mps",
+      "patch": "32x32x32",
+      "base_channels": 16,
+      "batch": 1,
+      "step_s": 0.052,
+      "patches_per_s": 19.09,
+      "voxels_per_s": 625656,
+      "mps_driver_alloc_GB": 0.3,
+      "sys_mem_used_GB": 12.4,
+      "swap_used_GB": 1.48
+    },
+    {
+      "device": "cpu",
+      "patch": "64x64x64",
+      "base_channels": 16,
+      "batch": 1,
+      "step_s": 0.563,
+      "patches_per_s": 1.78,
+      "voxels_per_s": 465399,
+      "mps_driver_alloc_GB": NaN,
+      "sys_mem_used_GB": 12.7,
+      "swap_used_GB": 1.48
+    },
+    {
+      "device": "mps",
+      "patch": "64x64x64",
+      "base_channels": 16,
+      "batch": 1,
+      "step_s": 0.263,
+      "patches_per_s": 3.8,
+      "voxels_per_s": 995497,
+      "mps_driver_alloc_GB": 1.36,
+      "sys_mem_used_GB": 12.2,
+      "swap_used_GB": 1.48
+    },
+    {
+      "device": "mps",
+      "patch": "64x64x64",
+      "base_channels": 16,
+      "batch": 2,
+      "step_s": 0.505,
+      "patches_per_s": 3.96,
+      "voxels_per_s": 1038726,
+      "mps_driver_alloc_GB": 2.79,
+      "sys_mem_used_GB": 13.6,
+      "swap_used_GB": 1.48
+    },
+    {
+      "device": "mps",
+      "patch": "64x64x64",
+      "base_channels": 8,
+      "batch": 1,
+      "step_s": 0.225,
+      "patches_per_s": 4.45,
+      "voxels_per_s": 1165520,
+      "mps_driver_alloc_GB": 1.65,
+      "sys_mem_used_GB": 12.3,
+      "swap_used_GB": 1.48
+    },
+    {
+      "device": "mps",
+      "patch": "64x64x64",
+      "base_channels": 24,
+      "batch": 1,
+      "step_s": 0.352,
+      "patches_per_s": 2.84,
+      "voxels_per_s": 745478,
+      "mps_driver_alloc_GB": 2.73,
+      "sys_mem_used_GB": 13.4,
+      "swap_used_GB": 1.48
+    },
+    {
+      "device": "mps",
+      "patch": "64x64x64",
+      "base_channels": 32,
+      "batch": 1,
+      "step_s": 0.432,
+      "patches_per_s": 2.31,
+      "voxels_per_s": 606261,
+      "mps_driver_alloc_GB": 3.37,
+      "sys_mem_used_GB": 13.9,
+      "swap_used_GB": 1.45
+    },
+    {
+      "device": "mps",
+      "patch": "96x96x96",
+      "base_channels": 16,
+      "batch": 1,
+      "step_s": 0.848,
+      "patches_per_s": 1.18,
+      "voxels_per_s": 1043832,
+      "mps_driver_alloc_GB": 3.48,
+      "sys_mem_used_GB": 14.2,
+      "swap_used_GB": 1.45
+    }
+  ]
+}

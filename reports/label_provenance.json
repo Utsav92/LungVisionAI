@@ -1,0 +1,75 @@
+{
+  "purpose": "decide whether a CONFIRMED-malignancy classifier is scientifically supportable",
+  "label_sources": {
+    "radiologist_suspicion": "nodules.csv malignancy_score = median of 1-5 subjective ratings per nodule (>=1 reader). NOT pathology.",
+    "diagnosis_sheet": "aux/tcia-diagnosis-data-2012-04-20.xls (TCIA, 157 patients): patient-level and per-nodule diagnosis + method."
+  },
+  "diagnosis_sheet": {
+    "patients": 157,
+    "patients_in_mirror": 157,
+    "patient_level_dx": {
+      "malignant metastatic": 51,
+      "malignant primary lung": 43,
+      "benign/non-malignant": 36,
+      "unknown": 27
+    },
+    "patient_level_method": {
+      "biopsy": 46,
+      "surgical resection": 39,
+      "2y radiological stability": 28,
+      "unknown": 28,
+      "progression/response": 16
+    },
+    "patient_level_dx_by_method": {
+      "unknown via unknown": 26,
+      "unknown via biopsy": 1,
+      "benign/non-malignant via 2y radiological stability": 26,
+      "benign/non-malignant via biopsy": 3,
+      "benign/non-malignant via surgical resection": 4,
+      "benign/non-malignant via progression/response": 3,
+      "malignant primary lung via biopsy": 20,
+      "malignant primary lung via surgical resection": 22,
+      "malignant primary lung via progression/response": 1,
+      "malignant metastatic via unknown": 2,
+      "malignant metastatic via 2y radiological stability": 2,
+      "malignant metastatic via biopsy": 22,
+      "malignant metastatic via surgical resection": 13,
+      "malignant metastatic via progression/response": 12
+    },
+    "nodule_level_labelled_rows": 157,
+    "nodule_level_known_dx_rows": 117,
+    "nodule_level_known_by_class": {
+      "malignant metastatic": 47,
+      "benign/non-malignant": 41,
+      "malignant primary lung": 29
+    },
+    "metastatic_primary_not_lung": 51,
+    "metastatic_rows_dropped_from_lung_cancer_target": "metastatic disease is malignant but is NOT primary lung cancer; kept separate",
+    "patients_with_any_known_nodule_dx": 104
+  },
+  "linkage_problem": "The sheet's 'Nodule k' index follows the original LIDC XML nodule numbering. The mirror's nodule_id comes from QIICR TrackingUID clustering. No crosswalk is provided, so sheet nodules cannot be assigned to specific mirror nodules/masks without manual verification. Only patients with exactly ONE clustered nodule in the mirror could be linked unambiguously.",
+  "linkable_unambiguously": {
+    "patients_with_known_dx_and_exactly_one_mirror_nodule": 31,
+    "by_class": {
+      "benign/non-malignant": 13,
+      "malignant metastatic": 10,
+      "malignant primary lung": 8
+    }
+  },
+  "radiologist_suspicion_task": {
+    "nodules_with_score": 2651,
+    "score_distribution": {
+      "1": 360,
+      "2": 790,
+      "3": 1124,
+      "4": 262,
+      "5": 115
+    },
+    "caveat": "median of readers' subjective 1-5 ratings; ordinal target; inter-reader disagreement is large"
+  },
+  "decision": {
+    "radiologist_suspicion_model": "ALLOWED (research, ordinal/regression, labelled as 'radiologist-rated suspicion')",
+    "confirmed_malignancy_model": "BLOCKED",
+    "reason": "only 31 unambiguously linkable labelled nodules; no nodule crosswalk; too few for patient-level train/val/test with CIs"
+  }
+}

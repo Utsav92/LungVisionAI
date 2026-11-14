@@ -1,0 +1,22 @@
+{
+  "split_id": "0d3c22b2a31122fd",
+  "seed": 42,
+  "algorithm": "patient-grouped, stratified by has_default_GT_nodule, 70/15/15",
+  "counts": {
+    "train": {
+      "patients": 707,
+      "scans": 713,
+      "scans_with_nodules": 492
+    },
+    "val": {
+      "patients": 151,
+      "scans": 152,
+      "scans_with_nodules": 105
+    },
+    "test": {
+      "patients": 152,
+      "scans": 153,
+      "scans_with_nodules": 106
+    }
+  }
+}

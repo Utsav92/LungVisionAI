@@ -1,0 +1,3 @@
+# merged: training.yaml + unet3d.yaml + mac_mini.yaml are loaded by train.py; this file overrides them.
+base: [configs/training.yaml, configs/unet3d.yaml, configs/mac_mini.yaml]
+experiment: pilot_unet16

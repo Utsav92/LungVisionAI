@@ -1,0 +1,18 @@
+seed: 1337
+patch_size: [64, 64, 64]
+batch_size: 1
+gradient_accumulation: 4
+optimizer: AdamW
+learning_rate: 0.0001
+weight_decay: 0.00001
+grad_clip: 1.0
+loss: {dice_weight: 0.5, bce_weight: 0.5}
+epochs: 50
+scheduler: cosine
+early_stopping_patience: 10
+checkpoint_interval: 1
+steps_per_epoch: 200       # patches sampled per epoch (disk-backed sampler, not full dataset passes)
+val_steps: 60
+pos_fraction: 0.5
+hard_neg_fraction: 0.5
+preprocessing: {hu_min: -1000.0, hu_max: 400.0, spacing: [1.0, 1.0, 1.0], orientation: LPS, range: [0.0, 1.0]}

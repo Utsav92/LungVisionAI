@@ -1,0 +1,559 @@
+{
+  "summary": {
+    "n_scans": 1018,
+    "n_patients": 1010,
+    "duplicate_series_uid": 0,
+    "duplicate_case_id": 0,
+    "patients_with_multiple_scans": [
+      "LIDC-IDRI-0132",
+      "LIDC-IDRI-0151",
+      "LIDC-IDRI-0315",
+      "LIDC-IDRI-0332",
+      "LIDC-IDRI-0355",
+      "LIDC-IDRI-0365",
+      "LIDC-IDRI-0442",
+      "LIDC-IDRI-0484"
+    ],
+    "scans_without_default_gt_nodule": 315,
+    "scans_without_any_contour(has_seg=False)": 135,
+    "irregular_z_spacing_scans": 6,
+    "slice_thickness_distribution": {
+      "2.5": 284,
+      "1.25": 221,
+      "0.62": 129,
+      "3.0": 115,
+      "1.0": 109,
+      "1.8": 67,
+      "2.0": 37,
+      "0.7": 30
+    },
+    "manufacturers": {
+      "GE MEDICAL SYSTEMS": 670,
+      "SIEMENS": 205,
+      "Philips": 74,
+      "TOSHIBA": 69
+    },
+    "annotation_policy": "default mask = nodules with >=3 annotations; voxel kept if >=50% of that nodule's annotations include it. 1-2-annotation nodules are background in masks/ (NOT 'nodule-free'). Nodules >=3mm only.",
+    "annotation_disagreement": {
+      "nodules_total": 2651,
+      "nodules_in_default_gt": 1392,
+      "by_n_annotations": {
+        "1": 771,
+        "2": 488,
+        "3": 481,
+        "4": 897,
+        "5": 8,
+        "6": 2,
+        "7": 3,
+        "8": 1
+      },
+      "median_dice_like(intersection/union)": 0.5477707006369427
+    },
+    "conflicting_label_definitions": "malignancy_score is a radiologist 1-5 suspicion rating, not pathology.",
+    "luna16_overlap": {
+      "in_luna16": 888,
+      "note": "LUNA16 is a strict subset of LIDC-IDRI; NOT independent validation."
+    },
+    "file_level_scans_checked": 17,
+    "issue_counts": {},
+    "orientation_codes": {
+      "LPS": 17
+    },
+    "empty_default_masks_among_checked": 0
+  },
+  "files": [
+    {
+      "case_id": "LIDC-IDRI-0001_9720603192",
+      "patient_id": "LIDC-IDRI-0001",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        133
+      ],
+      "zooms": [
+        0.7031,
+        0.7031,
+        2.5
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -2048,
+      "hu_max": 3071,
+      "hu_p1": -2048.0,
+      "hu_p99": 420.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 5428
+    },
+    {
+      "case_id": "LIDC-IDRI-0003_3480003264",
+      "patient_id": "LIDC-IDRI-0003",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        140
+      ],
+      "zooms": [
+        0.8203,
+        0.8203,
+        2.5
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -2048,
+      "hu_max": 5892,
+      "hu_p1": -2048.0,
+      "hu_p99": 439.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 4206
+    },
+    {
+      "case_id": "LIDC-IDRI-0004_2212458228",
+      "patient_id": "LIDC-IDRI-0004",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        241
+      ],
+      "zooms": [
+        0.8223,
+        0.8223,
+        1.25
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -3024,
+      "hu_max": 3071,
+      "hu_p1": -3024.0,
+      "hu_p99": 276.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 73
+    },
+    {
+      "case_id": "LIDC-IDRI-0006_7924920957",
+      "patient_id": "LIDC-IDRI-0006",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        133
+      ],
+      "zooms": [
+        0.625,
+        0.625,
+        2.5
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -2048,
+      "hu_max": 3071,
+      "hu_p1": -2048.0,
+      "hu_p99": 458.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 163
+    },
+    {
+      "case_id": "LIDC-IDRI-0007_8330857680",
+      "patient_id": "LIDC-IDRI-0007",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        145
+      ],
+      "zooms": [
+        0.7812,
+        0.7812,
+        2.5
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -2048,
+      "hu_max": 3071,
+      "hu_p1": -2048.0,
+      "hu_p99": 474.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 5110
+    },
+    {
+      "case_id": "LIDC-IDRI-0016_3134773630",
+      "patient_id": "LIDC-IDRI-0016",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        141
+      ],
+      "zooms": [
+        0.5859,
+        0.5859,
+        2.5
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -2048,
+      "hu_max": 3071,
+      "hu_p1": -2048.0,
+      "hu_p99": 448.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 4072
+    },
+    {
+      "case_id": "LIDC-IDRI-0020_6518747372",
+      "patient_id": "LIDC-IDRI-0020",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        225
+      ],
+      "zooms": [
+        0.8281,
+        0.8281,
+        1.25
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -3024,
+      "hu_max": 3071,
+      "hu_p1": -3024.0,
+      "hu_p99": 265.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 136
+    },
+    {
+      "case_id": "LIDC-IDRI-0021_6515802868",
+      "patient_id": "LIDC-IDRI-0021",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        149
+      ],
+      "zooms": [
+        0.7422,
+        0.7422,
+        2.5
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -2048,
+      "hu_max": 3071,
+      "hu_p1": -2048.0,
+      "hu_p99": 435.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 249
+    },
+    {
+      "case_id": "LIDC-IDRI-0024_7954580114",
+      "patient_id": "LIDC-IDRI-0024",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        133
+      ],
+      "zooms": [
+        0.7812,
+        0.7812,
+        2.5
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -2048,
+      "hu_max": 3071,
+      "hu_p1": -2048.0,
+      "hu_p99": 543.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 1038
+    },
+    {
+      "case_id": "LIDC-IDRI-0034_2824032832",
+      "patient_id": "LIDC-IDRI-0034",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        265
+      ],
+      "zooms": [
+        0.6699,
+        0.6699,
+        1.25
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -3024,
+      "hu_max": 2184,
+      "hu_p1": -3024.0,
+      "hu_p99": 398.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 77
+    },
+    {
+      "case_id": "LIDC-IDRI-0036_4514718990",
+      "patient_id": "LIDC-IDRI-0036",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        273
+      ],
+      "zooms": [
+        0.7402,
+        0.7402,
+        1.25
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -3024,
+      "hu_max": 3071,
+      "hu_p1": -3024.0,
+      "hu_p99": 493.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 424
+    },
+    {
+      "case_id": "LIDC-IDRI-0044_5216493273",
+      "patient_id": "LIDC-IDRI-0044",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        147
+      ],
+      "zooms": [
+        0.7031,
+        0.7031,
+        2.5
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -2048,
+      "hu_max": 3071,
+      "hu_p1": -2048.0,
+      "hu_p99": 407.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 7901
+    },
+    {
+      "case_id": "LIDC-IDRI-0054_3093760291",
+      "patient_id": "LIDC-IDRI-0054",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        133
+      ],
+      "zooms": [
+        0.7812,
+        0.7812,
+        2.5
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -2048,
+      "hu_max": 3071,
+      "hu_p1": -2048.0,
+      "hu_p99": 437.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 1403
+    },
+    {
+      "case_id": "LIDC-IDRI-0069_6154504249",
+      "patient_id": "LIDC-IDRI-0069",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        136
+      ],
+      "zooms": [
+        0.741,
+        0.741,
+        2.0
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -2479,
+      "hu_max": 24796,
+      "hu_p1": -2048.0,
+      "hu_p99": 476.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 2150
+    },
+    {
+      "case_id": "LIDC-IDRI-0073_5868125932",
+      "patient_id": "LIDC-IDRI-0073",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        131
+      ],
+      "zooms": [
+        0.7031,
+        0.7031,
+        2.5
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -2048,
+      "hu_max": 3071,
+      "hu_p1": -2048.0,
+      "hu_p99": 457.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 1497
+    },
+    {
+      "case_id": "LIDC-IDRI-0081_4757844726",
+      "patient_id": "LIDC-IDRI-0081",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        126
+      ],
+      "zooms": [
+        0.8594,
+        0.8594,
+        2.5
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -2048,
+      "hu_max": 3071,
+      "hu_p1": -2048.0,
+      "hu_p99": 459.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 2108
+    },
+    {
+      "case_id": "LIDC-IDRI-0083_1247860532",
+      "patient_id": "LIDC-IDRI-0083",
+      "issues": [],
+      "img_exists": true,
+      "mask_exists": true,
+      "shape": [
+        512,
+        512,
+        218
+      ],
+      "zooms": [
+        0.8203,
+        0.8203,
+        1.25
+      ],
+      "orientation": "LPS",
+      "mask_orientation": "LPS",
+      "hu_min": -2048,
+      "hu_max": 3071,
+      "hu_p1": -2048.0,
+      "hu_p99": 439.0,
+      "has_fov_padding": true,
+      "mask_values": [
+        0,
+        1
+      ],
+      "mask_voxels": 179
+    }
+  ]
+}

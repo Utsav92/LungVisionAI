@@ -1,0 +1,20 @@
+[project]
+name = "lungvision-ai"
+version = "0.1.0"
+description = "LungVision AI - research-only 3D pulmonary nodule segmentation/detection (from-scratch 3D U-Net)"
+requires-python = ">=3.11,<3.13"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["lvdata", "models", "training", "evaluation", "inference", "visualization", "app", "scripts"]

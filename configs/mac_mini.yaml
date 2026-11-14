@@ -1,0 +1,4 @@
+# Hardware profile (measured: M5 Pro, 24 GB unified memory)
+device: mps
+num_workers: 0          # mmap reads are cheap; raise to 2 only after benchmarking
+max_memory_note: "never raise PYTORCH_MPS_HIGH_WATERMARK_RATIO; reduce patch/base_channels instead"

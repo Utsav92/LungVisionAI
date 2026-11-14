@@ -1,0 +1,49 @@
+{
+  "seed": 1337,
+  "patch_size": [
+    64,
+    64,
+    64
+  ],
+  "batch_size": 1,
+  "gradient_accumulation": 4,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "weight_decay": 1e-05,
+  "grad_clip": 1.0,
+  "loss": {
+    "dice_weight": 0.5,
+    "bce_weight": 0.5
+  },
+  "epochs": 30,
+  "scheduler": "cosine",
+  "early_stopping_patience": 30,
+  "checkpoint_interval": 1,
+  "steps_per_epoch": 150,
+  "val_steps": 60,
+  "pos_fraction": 0.5,
+  "hard_neg_fraction": 0.5,
+  "preprocessing": {
+    "hu_min": -1000.0,
+    "hu_max": 400.0,
+    "spacing": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "orientation": "LPS",
+    "range": [
+      0.0,
+      1.0
+    ]
+  },
+  "model": "Custom3DUNet",
+  "pretrained": false,
+  "base_channels": 16,
+  "norm": "group",
+  "act": "silu",
+  "device": "mps",
+  "num_workers": 0,
+  "max_memory_note": "never raise PYTORCH_MPS_HIGH_WATERMARK_RATIO; reduce patch/base_channels instead",
+  "experiment": "pilot_unet16_v2"
+}

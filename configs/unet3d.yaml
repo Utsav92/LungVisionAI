@@ -1,0 +1,5 @@
+model: Custom3DUNet
+pretrained: false
+base_channels: 16
+norm: group
+act: silu

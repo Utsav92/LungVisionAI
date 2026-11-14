@@ -1,0 +1,9 @@
+overlap: 0.5
+batch_size: 4
+detect_threshold: 0.5
+min_diameter_mm: 3.0
+dedup_dist_mm: 4.0
+skip_below_hu: -700
+# size strata fixed BEFORE test evaluation (equivalent-sphere diameter of the reference nodule, mm)
+size_bins_mm: [[3, 6], [6, 10], [10, 1000]]
+slice_thickness_bins_mm: [[0, 1.5], [1.5, 2.6], [2.6, 100]]
